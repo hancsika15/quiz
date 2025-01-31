@@ -1,0 +1,76 @@
+/* Alap stílusok */
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 900px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2rem;
+    color: #343a40;
+}
+
+p {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+/* Kártyák stílusa */
+.card {
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+/* Rádió gombok és címkék */
+input[type="radio"] {
+    margin-right: 8px;
+}
+
+label {
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Gomb stílusok */
+#submit-btn {
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#submit-btn:disabled {
+    background-color: #ccc;
+    border-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Eredmény megjelenítése */
+#result {
+    background: #e9ecef;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#score {
+    font-size: 1.5rem;
+    color: #28a745;
+}
