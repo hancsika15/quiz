@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="hu">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Teszt</title>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Online Teszt</h1>
+        <p class="text-center text-muted">Válaszd ki a helyes válaszokat, majd küldd el a tesztet!</p>
+
+        <!-- Progress Bar -->
+        <div class="progress mb-4">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" id="progress-bar" role="progressbar"
+                aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+        </div>
+
+        <!-- Teszt kérdések -->
+        <form id="quiz-form">
+
+            <div class="row">
+                <!-- CSS -->
+                <!-- Kérdés 1  1-->
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-header">1. Mi a helyes HTML a külső stíluslapra való hivatkozáshoz?</div>
+                        <div class="card-body">
+                            <div>
+                                <input type="radio" name="q1" value="0" id="q1-a">
+                                <label for="q1-a">&lt; style src = "mystyle.css"&gt;</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q1" value="1" id="q1-b">
+                                <label for="q1-b">&lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q1" value="0" id="q1-c">
+                                <label for="q1-c">&lt;stylesheet&gt;mystyle.css&lt;/stylesheet&gt;</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kérdés 2 2-->
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-header">2. Melyik a helyes CSS szintaxis?</div>
+                        <div class="card-body">
+                            <div>
+                                <input type="radio" name="q2" value="0" id="q2-a">
+                                <label for="q2-a"> {body:color=black;}</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q2" value="0" id="q2-b">
+                                <label for="q2-b"> {body:color=black;}</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q2" value="1" id="q2-c">
+                                <label for="q2-c"> body {color: black;}</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kérdés 3 1-->
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-header">3. Hogyan illesszünk be egy megjegyzést egy CSS fájlba?</div>
+                        <div class="card-body">
+                            <div>
+                                <input type="radio" name="q3" value="0" id="q3-a">
+                                <label for="q3-a"> ' this is a comment</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q3" value="1" id="q3-b">
+                                <label for="q3-b"> /* this is a comment */</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q3" value="0" id="q3-c">
+                                <label for="q3-c"> // this is a comment //</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kérdés 4 2-->
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-header">4.Melyik CSS tulajdonság szabályozza a szöveg méretét?</div>
+                        <div class="card-body">
+                            <div>
+                                <input type="radio" name="q4" value="0" id="q4-a">
+                                <label for="q4-a"> font-style</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q4" value="0" id="q4-b">
+                                <label for="q4-b"> text-style</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q4" value="1" id="q4-c">
+                                <label for="q4-c"> font-size</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kérdés 5 1-->
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-header">5. Hogyan jeleníthet meg egy ilyen szegélyt:
+                            The top border = 10 pixels
+                            The bottom border = 5 pixels
+                            The left border = 20 pixels
+                            The right border = 1pixel?</div>
+                        <div class="card-body">
+                            <div>
+                                <input type="radio" name="q5" value="0" id="q5-a">
+                                <label for="q5-a"> border-width:10px 5px 20px 1px;</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q5" value="1" id="q5-b">
+                                <label for="q5-b"> border-width:10px 1px 5px 20px;</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q5" value="0" id="q5-c">
+                                <label for="q5-c"> border-width:10px 20px 5px 1px;</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HTML -->
+                <!-- Kérdés 6 1-->
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-header">6. Melyik HTML elem segítségével hozunk létre kattintható hivatkozást?</div>
+                        <div class="card-body">
+                            <div>
+                                <input type="radio" name="q6" value="0" id="q6-a">
+                                <label for="q6-a">&lt;link&gt;</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q6" value="1" id="q6-b">
+                                <label for="q6-b">&lt;a&gt;</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q1" value="0" id="q6-c">
+                                <label for="q6-c">&lt;href&gt;</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kérdés 7 0-->
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-header">7. Melyik HTML tag használható egy weboldal főcímének megjelenítésére?</div>
+                        <div class="card-body">
+                            <div>
+                                <input type="radio" name="q7" value="1" id="q7-a">
+                                <label for="q7-a">&lt;h1&gt;</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q7" value="0" id="q7-b">
+                                <label for="q7-b">&lt;head&gt;</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q7" value="0" id="q7-c">
+                                <label for="q7-c">&lt;title&gt;</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kérdés 8 1-->
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-header">8. Melyik HTML tagot használjuk egy új bekezdés létrehozásához?</div>
+                        <div class="card-body">
+                            <div>
+                                <input type="radio" name="q8" value="0" id="q8-a">
+                                <label for="q8-a">&lt;break&gt;</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q8" value="1" id="q8-b">
+                                <label for="q8-b">&lt;p&gt;</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q8" value="0" id="q8-c">
+                                <label for="q8-c">&lt;br&gt;</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kérdés 9 2-->
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-header">9. Melyik HTML elem használható egy weblap tartalmának vizuális szakaszokra bontására?</div>
+                        <div class="card-body">
+                            <div>
+                                <input type="radio" name="q9" value="0" id="q9-a">
+                                <label for="q9-a">&lt;span&gt;</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q9" value="0" id="q9-b">
+                                <label for="q9-b">&lt;line&gt;</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q9" value="1" id="q9-c">
+                                <label for="q9-c">&lt;div&gt;</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kérdés 10 1-->                
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-header">10. Melyik HTML5 elem használható **önmagában** egy űrlap elküldésére anélkül, hogy egy JavaScript-es eseménykezelőt kellene hozzáadni?</div>
+                        <div class="card-body">
+                            <div>
+                                <input type="radio" name="q10" value="0" id="q10-a">
+                                <label for="q10-a">&lt;input type="submit"&gt;</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q10" value="1" id="q10-b">
+                                <label for="q10-b">&lt;button type="submit"&gt;</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q10" value="0" id="q10-c">
+                                <label for="q10-c">&lt;a href="submit.html"&gt;</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Js -->
+                <!-- Kérdés 11 2-->
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            11. Mi lesz a konzolban kiírt számok sorrendje?
+                        </div>
+                        <div class="card-body">
+                            <pre>
+                                console.log(1);
+                
+                                setTimeout(() => {
+                                    console.log(2);
+                                }, 0);
+                
+                                console.log(3);
+                            </pre>
+                            <div>
+                                <input type="radio" name="q11" value="0" id="q11-a">
+                                <label for="q11-a">1, 2, 3</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q11" value="0" id="q11-c">
+                                <label for="q11-c">2, 1, 3</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q11" value="1" id="q11-b">
+                                <label for="q11-b">1, 3, 2</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kérdés 12 0-->
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            12. Mi lesz a következő kódrészlet kimenete?
+                        </div>
+                        <div class="card-body">
+                            <pre>
+                                const obj = {
+                                    value: 42,
+                                    getValue: () => {
+                                        return this.value;
+                                    }
+                                };
+                
+                                console.log(obj.getValue());
+                            </pre>
+                            <div>
+                                <input type="radio" name="q12" value="1" id="q12-b">
+                                <label for="q12-b">undefined</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q12" value="0" id="q12-a">
+                                <label for="q12-a">42</label>
+                            </div>                            
+                            <div>
+                                <input type="radio" name="q12" value="0" id="q12-c">
+                                <label for="q12-c">TypeError</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kérdés 13 1-->
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            13. Mi lesz a következő összehasonlítás kimenete?
+                        </div>
+                        <div class="card-body">
+                            <pre>
+                                console.log({} == {});
+                                console.log([] == []);
+                            </pre>
+                            <div>
+                                <input type="radio" name="q13" value="0" id="q13-a">
+                                <label for="q13-a">true, true</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q13" value="1" id="q13-b">
+                                <label for="q13-b">false, false</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q13" value="0" id="q13-c">
+                                <label for="q13-c">true, false</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kérdés 14 2-->
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            14. Mi lesz a konzolban kiírt számok sorrendje?
+                        </div>
+                        <div class="card-body">
+                            <pre>
+                                console.log(1);
+                
+                                setTimeout(() => {
+                                    console.log(2);
+                                }, 0);
+                
+                                console.log(3);
+                            </pre>
+                            <div>
+                                <input type="radio" name="q14" value="0" id="q14-a">
+                                <label for="q14-a">1, 2, 3</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q14" value="0" id="q14-c">
+                                <label for="q14-c">2, 1, 3</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q14" value="1" id="q14-b">
+                                <label for="q14-b">1, 3, 2</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kérdés 15 1-->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            15. Mi lesz a konzolban kiírt sorrend a következő kód esetén?
+                        </div>
+                        <div class="card-body">
+                            <pre>
+                                console.log("A");
+                               
+                                async function test() {
+                                    console.log("B");
+                                    await new Promise(resolve => setTimeout(resolve, 0));
+                                    console.log("C");
+                                }
+                               
+                                test();
+                               
+                                console.log("D");
+                            </pre>
+                            <div>
+                                <input type="radio" name="q15" value="0" id="q15-a">
+                                <label for="q15-a">A, B, C, D</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q15" value="1" id="q15-b">
+                                <label for="q15-b">A, B, D, C</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q15" value="0" id="q15-c">
+                                <label for="q15-c">A, C, B, D</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Kérdés 16 2-->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            16. Mi lesz a konzolban kiírt értékek a következő kód futtatásakor?
+                        </div>
+                        <div class="card-body">
+                            <pre>
+                                for (var i = 0; i < 3; i++) {
+                                    setTimeout(() => {
+                                        console.log(i);
+                                    }, 1000);
+                                }
+                            </pre>
+                            <div>
+                                <input type="radio" name="q16" value="0" id="q16-a">
+                                <label for="q16-a">0, 1, 2</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q16" value="0" id="q16-c">
+                                <label for="q16-c">0, 1, 3</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="q16" value="1" id="q16-b">
+                                <label for="q16-b">3, 3, 3</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Submit gomb -->
+            <button type="submit" id="submit-btn" class="btn btn-primary w-100 mt-3" disabled>Kiértékelés</button>
+        </form>
+
+        <!-- Eredmény -->
+        <div id="result" class="mt-4 text-center" style="display: none;">
+            <h2>Eredményed:</h2>
+            <p id="score"></p>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Saját script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
